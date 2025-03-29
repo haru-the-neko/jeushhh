@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeush's Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212; 
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
+        
+        .nav-bar {
+            width: 100%;
+            background-color: #181818;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px; 
+}
+
+.nav-bar button:hover {
+    background-color: #1DB954;
+    transform: scale(1.05);
+    border-radius: 20px; 
+}
+
+        
+
+        .nav-bar button:active {
+            transform: scale(0.98);
+        }
+
+        
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 1000px;
+            padding: 30px;
+            background: #181818; 
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            margin-top: 70px; 
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            color: #1DB954;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(29, 185, 84, 0.4); 
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: #4E4E4E; 
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .section-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .section-box {
+            background-color: #282828; 
+            border-radius: 10px;
+            overflow: hidden;
+            width: 45%;
+            max-width: 400px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-box:hover {
+            transform: scale(1.05); 
+        }
+
+        .section-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .section-box h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-top: 15px;
+        }
+
+        .section-box p {
+            color: #b3b3b3;
+            font-size: 16px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #b3b3b3;
+            margin-top: 10px;
+        }
+
+        .video-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .video-container video {
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="nav-bar">
+        <button><a href="index.html" style="color: white; text-decoration: none;">Home</a></button>
+        <button><a href="biography.html" style="color: white; text-decoration: none;">Biography</a></button>
+        <button><a href="Skills.html" style="color: white; text-decoration: none;">Skills</a></button>
+        <button><a href="resume.html" style="color: white; text-decoration: none;">Resume</a></button>
+        <button><a href="dump.html" style="color: white; text-decoration: none;">Dump</a></button>
+        <button><a href="MyBeat.html" style="color: white; text-decoration: none;">Beat</a></button>
+        <button><a href="Film.html" style="color: white; text-decoration: none;">Films</a></button>
+        <button><a href="travel.html" style="color: white; text-decoration: none;">Places</a></button>
+        <button><a href="B-List.html" style="color: white; text-decoration: none;">Goals</a></button>
+        
+    </div>
+
+    
+    <div class="container">
+        <header class="header">
+            <h1>Jeush's Page</h1>
+            <hr>
+            <p class="description">Discover all there is to know about me, all in one place</p>
+        </header>
+
+        <div class="section-boxes">
+            <div class="section-box">
+                <img src="https://i.imgur.com/9l3jh04.jpeg" alt="Image 1">
+                <h3>Playlist 1</h3>
+                <p>I love cats, and I have three as a pet</p>
+            </div>
+
+            <div class="section-box">
+                <img src="https://i.imgur.com/gEzB3uP.jpeg" alt="Image 2">
+                <h3>Playlist 2</h3>
+                <p>I like music and films.</p>
+            </div>
+        </div>  
+
+        <div class="video-container">
+            <video controls>
+                <source src="https://videos.pexels.com/video-files/3826731/3826731-uhd_2732_1440_25fps.mp4" type="video/mp4">
+                
+            </video>
+        </div>
+    </div>
+</body>
+</html>

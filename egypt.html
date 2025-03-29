@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Special Place</title>
+    <style>
+      body {
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #b3b3b3;
+      }
+
+      h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1db954;
+            margin-bottom: 20px;
+        }
+
+      .main-content {
+          margin: 20px auto;
+          padding: 20px;
+          max-width: 1200px;
+      }
+
+      section {
+          background-color: #181818;
+          border-radius: 10px;
+          padding: 20px;
+          margin-bottom: 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+          font-size: 28px;
+          font-weight: 700;
+          color: #e0e0e0;
+          margin-bottom: 15px;
+      }
+
+      p {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #e0e0e0;
+          margin-bottom: 20px;
+      }
+      
+      
+.image-gallery {
+    margin-bottom: 20px;
+}
+
+.image-gallery h2 {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+
+.image-gallery .images-container {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.image-gallery .images-container a {
+    width: 23%; 
+}
+
+.image-gallery img {
+    width: 100%; 
+    height: 170px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
+}
+
+
+
+
+  
+      footer {
+          background-color: #1a1a1a;
+          color: #b3b3b3;
+          text-align: center;
+          padding: 1rem;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+
+      a {
+          color: #1DB954;
+          text-decoration: none;
+      }
+
+      .other-places {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 20px;
+          margin-top: 20px;
+      }
+
+      .place {
+          background-color: #242424;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          height: auto;
+          transition: transform 0.3s ease;
+      }
+
+      .place img {
+          width: 100%;
+          height: 200px;
+          border-radius: 8px;
+          object-fit: cover;
+          margin-bottom: 15px;
+      }
+
+      .place h3 {
+          font-size: 22px;
+          color: #e0e0e0;
+          margin-bottom: 10px;
+      }
+
+      .place p {
+          font-size: 14px;
+          color: #e0e0e0;
+          margin-bottom: 10px;
+          flex-grow: 1;
+          overflow: visible;
+      }
+
+      .place:hover {
+          transform: translateY(-10px);
+      }
+
+      .other-places h2 {
+          grid-column: 1 / -1;
+          text-align: center;
+      }
+
+      .nav-bar {
+            width: 100%;
+            background-color: #181818;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px; 
+        }
+
+        .nav-bar button:hover {
+            background-color: #1DB954;
+            transform: scale(1.05);
+            border-radius: 20px; 
+        }
+
+        .nav-bar button:active {
+            transform: scale(0.98);
+        }
+
+        button {
+            background-color: #282828;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #1DB954; 
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <button><a href="index.html">Home</a></button>
+    <button><a href="biography.html">Biography</a></button>
+    <button><a href="Skills.html">Skills</a></button>
+    <button><a href="resume.html">Resume</a></button>
+    <button><a href="dump.html">Dump</a></button>
+    <button><a href="MyBeat.html">Beat</a></button>
+    <button><a href="Film.html">Films</a></button>
+    <button><a href="travel.html">Places</a></button>
+    <button><a href="B-List.html">Goals</a></button>
+  </div>
+
+  <div class="main-content">
+    <header>
+        <h1>Egypt</h1>
+    </header>
+
+    <section class="image-gallery">
+      <h2>Detailed Pictures of the Scenery</h2>
+      <div class="images-container">
+          <a href="https://i.imgur.com/VpbtpVQ.jpeg" target="_blank">
+              <img src="https://i.imgur.com/VpbtpVQ.jpeg=" alt="Scenery 1">
+          </a>
+          <a href="https://i.imgur.com/is0oM1M.jpeg" target="_blank">
+              <img src="https://i.imgur.com/is0oM1M.jpeg" alt="Scenery 2">
+          </a>
+          <a href="https://i.imgur.com/7LX1IEQ.jpeg" target="_blank">
+              <img src="https://i.imgur.com/7LX1IEQ.jpeg" alt="Scenery 3">
+          </a>
+          <a href="https://i.imgur.com/FtQz01k.jpeg" target="_blank">
+              <img src="https://i.imgur.com/FtQz01k.jpeg" alt="Scenery 4">
+          </a>
+      </div>
+  </section>
+
+    <section class="description">
+        <h2>Why This Place Is Special To Me</h2>
+        <p>Egypt is special to me because it feels like stepping into a completely different world. The landscapes and atmosphere create a unique, almost otherworldly vibe, as if I’ve entered a different biome altogether. I’m drawn to explore its ancient wonders, from the majestic pyramids to the vibrant life along the Nile. The rich culture, history, and traditions make Egypt a place I’ve always wanted to experience firsthand, as it offers a fascinating blend of the old and the new that’s unlike any other place in the world.</p>
+    </section>
+
+    <section class="how-to-get-there">
+        <h2>How to Get There</h2>
+        <p>To get to Egypt from Manila, follow these steps:</p>
+        <ul>
+          <li><strong>Book a Flight:</strong> Look for international airlines that operate flights from Manila (Ninoy Aquino International Airport - NAIA) to Egypt (Cairo International Airport is the most common international gateway). Some airlines with connecting flights include Emirates (via Dubai), Qatar Airways (via Doha), Singapore Airlines (via Singapore), Etihad Airways (via Abu Dhabi), and Turkish Airlines (via Istanbul). Flight duration can range from 14 to 20+ hours, depending on your route and layovers.</li>
+          <li><strong>Flight Options:</strong> Choose airlines like Emirates, Qatar Airways, Singapore Airlines, Etihad Airways, or Turkish Airlines. These airlines usually offer connecting flights to Cairo or other major Egyptian cities like Alexandria.</li>
+          <li><strong>Arrival in Egypt:</strong> Upon arrival at Cairo International Airport or another Egyptian airport, you will go through immigration and customs. Ensure your passport is valid for at least six months beyond your stay, and be prepared to show proof of your return ticket and accommodation details.</li>
+          <li><strong>Visa Requirements:</strong> Philippine passport holders need a tourist visa to enter Egypt. You can apply for an e-visa online through Egypt’s official e-visa portal or obtain a visa on arrival at the airport. Required documents include a valid passport, completed visa application form, return ticket, accommodation details, and sufficient financial proof for your stay.</li>
+          <li><strong>Transportation from the Airport:</strong> After clearing customs, you can take taxis, buses, or ride-sharing services to your destination within Cairo or other cities in Egypt. The public transportation system is available, but taxis or ride-sharing apps like Uber are popular and convenient options for tourists.</li>
+        </ul>        
+
+      <h3>Location of Cairo International Airport</h3>
+      <div class="map-container" style="margin-top: 20px; width: 100%; height: 450px;">
+        <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13804.581479412616!2d31.38961705450103!3d30.118653498177213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145817082ea84f41%3A0xe065af2151e21386!2sCairo%20International%20Airport!5e0!3m2!1sen!2sph!4v1743226318485!5m2!1sen!2sph" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+    
+    </section>
+
+    <section class="other-places">
+        <h2>Places to Visit in Egpyt</h2>
+        <div class="place">
+          <a href="https://i.imgur.com/Rjvh5VW.jpeg" target="_blank">
+            <img src="https://i.imgur.com/Rjvh5VW.jpeg" alt="Place 1">
+          </a>
+            <h3>The Pyramids of Giza</h3>
+            <p>The Pyramids of Giza, located near Cairo, Egypt, are ancient tombs built for Pharaohs during the Fourth Dynasty, around 4,500 years ago. The largest, the Great Pyramid of Khufu, stands at 481 feet tall and is the only surviving wonder of the Seven Wonders of the Ancient World. The site also features the Pyramid of Khafre, with the Great Sphinx nearby, and the Pyramid of Menkaure. These iconic structures showcase the advanced engineering and rich cultural history of ancient Egypt, making Giza one of the most famous archaeological sites in the world.</p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/POV105B.jpeg" target="_blank">
+            <img src="https://i.imgur.com/POV105B.jpeg" alt="Place 2">
+          </a>
+            <h3>Luxor and the Valley of the Kings</h3>
+            <p>Luxor, often referred to as the "world's greatest open-air museum," is a city in southern Egypt renowned for its ancient monuments and historical significance. It was once the capital of the New Kingdom and the center of ancient Egyptian power. The Valley of the Kings, located on the west bank of the Nile near Luxor, is a burial ground for many pharaohs and nobles, including the famous tomb of King Tutankhamun. The valley is home to more than 60 tombs, carved deep into the rock, showcasing stunning wall paintings and inscriptions that offer a glimpse into the grandeur of ancient Egyptian burial practices. </p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/3fAdTLN.jpeg" target="_blank">
+            <img src="https://i.imgur.com/3fAdTLN.jpeg" alt="Place 3">
+          </a>
+            <h3>Siwa Oasis</h3>
+            <p>The town of Siwa itself is rich in traditional Berber culture, with its mudbrick homes and winding alleys, offering a glimpse into the lives of the indigenous people. Visitors can also explore the Shali Fortress, the ancient ruins of a city built from salt and clay, and relax by the serene Cleopatra's Bath, a natural spring. The town of Siwa itself is rich in traditional Berber culture, with its mudbrick homes and winding alleys, offering a glimpse into the lives of the indigenous people. Visitors can also explore the Shali Fortress, the ancient ruins of a city built from salt and clay, and relax by the serene Cleopatra's Bath, a natural spring.</p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/aFjoEab.jpeg" target="_blank">
+            <img src="https://i.imgur.com/aFjoEab.jpeg" alt="Place 1">
+          </a>
+          <h3>White Dessert</h3>
+          <p>The White Desert, also known as the White Desert National Park, is a stunning natural wonder located in Egypt’s Western Desert. This surreal landscape is characterized by vast stretches of white, chalky limestone formations that have been sculpted by the wind over thousands of years, creating otherworldly shapes and figures. The desert is particularly famous for its unique, snow-like appearance, which contrasts sharply with the surrounding golden sands of the desert. The White Desert is an extraordinary example of Egypt’s diverse landscapes, providing a different side of the country’s natural beauty, away from the usual historical sites.</p>
+        </div>
+    </section>
+  </div>
+  <button><a href="#top">Go Top</a></button>
+  <button><a href="travel.html">Home</a></button>
+
+</body>
+</html>
+  

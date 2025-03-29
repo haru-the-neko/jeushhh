@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beat: Favorite Music</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            padding-top: 60px; 
+        }
+
+        h1 {
+            text-align: center;
+            color: #1db954;
+            font-size: 3em;
+            margin-top: 30px;
+            letter-spacing: 2px;
+        }
+
+        .section {
+            padding: 30px;
+            margin: 30px auto;
+            width: 85%;
+            background-color: #282828;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #b3b3b3;
+            font-size: 1.5em;
+        }
+
+        .genre-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            align-items: stretch; 
+        }
+
+        .genre-item {
+            width: 32%; 
+            margin-bottom: 30px;
+            background-color: #333;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .genre-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .genre-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;  
+            
+        }
+
+
+        .genre-item .caption {
+            padding: 15px;
+            color: #fff;
+            font-size: 1em; 
+            font-weight: normal;
+            line-height: 1.4; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 120px; 
+        }
+
+        .genre-item .caption h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .genre-item .caption p {
+            font-size: 0.9em;
+            color: #b3b3b3; 
+            margin: 0;
+        }
+
+        .audio-container {
+            margin-top: 10px;
+            padding: 15px; 
+        }
+
+        iframe {
+            width: 100%;
+            height: 152px;
+            border-radius: 12px;
+            border: none;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            color: #b3b3b3;
+        }
+
+        .footer a {
+            color: #1db954;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #282828;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #1DB954; 
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .nav-bar {
+            width: 100%;
+            background-color: #181818;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px; 
+        }
+
+        .nav-bar button:hover {
+            background-color: #1DB954;
+            transform: scale(1.05);
+            border-radius: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <button><a href="index.html">Home</a></button>
+        <button><a href="biography.html">Biography</a></button>
+        <button><a href="Skills.html">Skills</a></button>
+        <button><a href="resume.html">Resume</a></button>
+        <button><a href="dump.html">Dump</a></button>
+        <button><a href="MyBeat.html">Beat</a></button>
+        <button><a href="Film.html">Films</a></button>
+        <button><a href="travel.html">Places</a></button>
+        <button><a href="B-List.html">Goals</a></button>
+    </div>
+
+    <h1>My Playlist</h1>
+
+    <div class="section" id="jazz">
+        <h2>Drake</h2>
+        <div class="genre-container">
+            <div class="genre-item">
+                <img src="https://i.imgur.com/c95M7Zj.jpeg" alt="John Coltrane - Blue Train">
+                <div class="caption">
+                    <h3>Look What You've Done</h3>
+                    <p><strong>Album: Take Care (Deluxe)</strong></p>
+                    <p>Drake reflects on gratitude and the support he's received from family and friends. He acknowledges their sacrifices and the impact they've had on his journey to success.</p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/7t1lBIr3WIEtqQEOdZFMUf?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="genre-item">
+                <img src="https://i.imgur.com/E9Yb8g1.jpeg" alt="Miles Davis - Kind of Blue">
+                <div class="caption">
+                    <h3>Hold On, We're Going Home</h3>
+                    <p><strong>Album: Nothing Was The Same (Deluxe)</strong></p>
+                    <p>Is a smooth, heartfelt track where he expresses his longing to be with someone special. He reassures them that everything will be fine as they navigate their relationship, conveying feelings of love and commitment.</p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/6jdOi5U5LBzQrc4c1VT983?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="genre-item">
+                <img src="https://i.imgur.com/fAtg5XN.jpeg" alt="Charlie Parker - Bird & Diz">
+                <div class="caption">
+                    <h3>Fancy</h3>
+                    <p><strong>Album: Thank Me Later (Int'l Version)</strong></p>
+                    <p>The song is about living a luxurious lifestyle, celebrating success, and enjoying the finer things in life. It highlights confidence, wealth, and the attention that comes with it, with a catchy, upbeat vibe.</p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/238Sekyg7DyN2XDm0z4oWY?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="pop">
+        <h2>Steve Lacy</h2>
+        <div class="genre-container">
+            <div class="genre-item">
+                <img src="https://i.imgur.com/Dpd9nfz.jpeg" alt="Dua Lipa - Future Nostalgia">
+                <div class="caption">
+                    <h3>Bad Habit</h3>
+                    <p><strong>Album: Gemini Rights</strong></p>
+                    <p>A song about self-awareness and romantic regret. Lacy reflects on his tendency to make impulsive decisions in relationships and acknowledges the negative impact of his bad habits.</p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/4k6Uh1HXdhtusDW5y8Gbvy?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="genre-item">
+                <img src="https://i.imgur.com/Dpd9nfz.jpeg" alt="The Weeknd - After Hours">
+                <div class="caption">
+                    <h3>Static</h3>
+                    <p><strong>Album: Gemini Rights</strong></p>
+                    <p>A song about the confusion and emotional tension in a complicated relationship. It highlights miscommunication and the struggles of trying to connect with someone while dealing with mixed signals.</p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/4OmfWzukSVD140NiAIEjem?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="genre-item">
+                <img src="https://i.imgur.com/0YGcd4D.jpeg" alt="Ariana Grande - Thank U, Next">
+                <div class="caption">
+                    <h3>Dark Red</h3>
+                    <p><strong>2017 | Single</strong></p>
+                    <p>A song about intense, unspoken emotions and the fear of rejection in a relationship. Lacy reflects on his feelings for someone and the anxiety that comes with wanting them but not knowing if they feel the same.</p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/3EaJDYHA0KnX88JvDhL9oa?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="rock">
+        <h2>Men I Trust</h2>
+        <div class="genre-container">
+            <div class="genre-item">
+                <img src="https://i.imgur.com/OMTMT3F.jpeg" alt="Queen - A Night at the Opera">
+                <div class="caption">
+                    <h3>Show Me How</h3>
+                    <p><strong>2018 | Single</strong></p>
+                    <p>A mellow, dreamy track about seeking connection and understanding in a relationship. The song conveys a sense of vulnerability and longing, with the lyrics expressing a desire for clarity and emotional openness. </p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/75IQVo8hqI1iwVZyvkN2VT?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="genre-item">
+                <img src="https://i.imgur.com/jVYVKC5.jpeg" alt="Led Zeppelin - Led Zeppelin IV">
+                <div class="caption">
+                    <h3>Numb</h3>
+                    <p><strong>2019 | Single</strong></p>
+                    <p>A smooth, melancholic track about feeling emotionally detached and disconnected. The song explores themes of numbness and inner conflict, expressing a sense of being lost or overwhelmed by emotions.</p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/6Ijmj8Z0L31hCp5pLZnT5U?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="genre-item">
+                <img src="https://i.imgur.com/DsDcS1M.jpeg" alt="The Rolling Stones - Let It Bleed">
+                <div class="caption">
+                    <h3>Tree Among Shrubs</h3>
+                    <p><strong>Album: Untourable Album</strong></p>
+                    <p>A reflective song about individuality and self-perception. Using the metaphor of a "tree among shrubs," it explores the feeling of standing out or being different from others, while embracing the strength that comes with uniqueness. </p>
+                </div>
+                <div class="audio-container">
+                    <iframe 
+                        src="https://open.spotify.com/embed/track/2JKtCvtxP47fOMYi0BjMoY?utm_source=generator" 
+                        frameborder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button><a href="#top">Go Top</a></button>
+    <button><a href="index.html">Home</a></button>
+
+</body>
+</html>

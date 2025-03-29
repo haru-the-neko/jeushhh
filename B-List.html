@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bucket List - Life Achievements</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 0;
+      padding-top: 20px; 
+      color: #1DB954;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px; 
+    }
+
+    .bucket-list {
+      width: 80%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .bucket-item {
+  background-color: #181818;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  height: auto;
+  transition: all 0.3s ease; 
+}
+
+.bucket-item:hover {
+  transform: scale(1.05); 
+  background-color: #232323;  
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8); 
+}
+
+.bucket-item img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; 
+}
+
+.bucket-item:hover img {
+  transform: scale(1.1); 
+}
+
+.bucket-item h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #1DB954;
+  text-align: center;
+}
+
+.bucket-item p {
+  margin-top: 10px;
+  color: #bbb;
+  text-align: justify;
+}
+
+
+
+
+    .add-bucket-item {
+      background-color: #1DB954;
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 30px;
+      transition: background-color 0.3s;
+    }
+
+    .add-bucket-item:hover {
+      background-color: #1AA34A;
+    }
+
+    button {
+      background-color: #282828;
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      margin: 15px 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    button:hover {
+      background-color: #1DB954;
+      transform: scale(1.05);
+    }
+
+    button a {
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .nav-bar {
+      width: 100%;
+      background-color: #181818;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-bar button {
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .nav-bar button:hover {
+      background-color: #1DB954;
+      transform: scale(1.05);
+      border-radius: 20px;
+    }
+
+    .nav-bar button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-bar">
+    <button><a href="index.html">Home</a></button>
+    <button><a href="biography.html">Biography</a></button>
+    <button><a href="Skills.html">Skills</a></button>
+    <button><a href="resume.html">Resume</a></button>
+    <button><a href="dump.html">Dump</a></button>
+    <button><a href="MyBeat.html">Beat</a></button>
+    <button><a href="Film.html">Films</a></button>
+    <button><a href="travel.html">Places</a></button>
+    <button><a href="B-List.html">Goals</a></button>
+  </div>
+
+  <header>
+    <h3>Bucket Lists</h3>
+  </header>
+
+  <div class="container">
+    <section class="bucket-list">
+      <div class="bucket-item">
+        <img src="https://i.imgur.com/ScLyyCp.jpeg" alt="Finish School">
+        <div class="bucket-item-content">
+          <h3>Finish School</h3>
+          <p>Finishing school has always been a significant goal for me, especially because I was always told that since I was a kid, education would be the key to unlocking my future. I was raised with the belief that completing my studies would open doors to endless possibilities and opportunities. Reaching this milestone is not only a personal achievement but also a fulfillment of the dreams and expectations others had for me. Completing this goal would be a testament to my dedication and hard work.</p>
+        </div>
+      </div>
+
+      <div class="bucket-item">
+        <img src="https://i.imgur.com/2tBUBZk.jpeg" alt="Travel">
+        <div class="bucket-item-content">
+          <h3>Travel</h3>
+          <p>Traveling has always been a dream of mine, as the world is full of experiences waiting to be discovered. From exploring different cultures to witnessing breathtaking landscapes, the idea of seeing new places has always fascinated me. I believe that traveling is not just about visiting new destinations, but also about personal growth, expanding my horizons, and creating unforgettable memories. Whether it's stepping foot in ancient cities or relaxing on a distant beach, each journey holds the promise of new adventures and life lessons.</p>
+        </div>
+      </div>
+
+      <div class="bucket-item">
+        <img src="https://i.imgur.com/Xp5Warm.jpeg" alt="Business">
+        <div class="bucket-item-content">
+          <h3>Start a Business</h3>
+          <p>Starting a business, especially a cat cafe, has always been a goal of mine. As someone who loves both coffee and cats, the idea of combining these two passions into a unique experience excites me. A cat cafe would not only allow people to enjoy a great cup of coffee, but also provide a space to relax and connect with adorable cats. I believe it would be the perfect blend of comfort, community, and joy. Creating a place where people can unwind, sip on their favorite brews, and spend time with furry friends would be a dream come true.</p>
+        </div>
+      </div>
+
+      <div class="bucket-item">
+        <img src="https://i.imgur.com/OGdIMMO.jpeg" alt="car">
+        <div class="bucket-item-content">
+          <h3>Dream Car</h3>
+          <p>Buying my dream car has always been a goal of mine. As Daniel Caesar sings in his unreleased track "Horsepower," "When I get older, I'll buy me that car." I'll certainly buy that car when I get older. Since I was a kid, I’ve been fascinated by JDM cars and vintage vehicles, with my favorite being the Nissan R34 Skyline. I even had a remote control toy version of it when I was a child, which sparked my love for cars. Over the years, I’ve continued to immerse myself in car culture by watching films about them and following F1 racing, the R34 Skyline is not just a car for me.</p>
+        </div>
+      </div>
+
+      <div class="bucket-item">
+        <img src="https://i.imgur.com/qpSlR7I.jpeg" alt="adopt pets">
+        <div class="bucket-item-content">
+          <h3>Adopt Pets</h3>
+          <p>I’ve always had a deep love for animals, and the idea of adopting pets is something that has always been close to my heart. Growing up, I was surrounded by pets, and I’ve learned just how fulfilling it is to care for animals. My goal, when I finally get my own place, is to adopt as many pets as I can, particularly strays who are often overlooked. I believe every animal deserves a loving home, and by adopting, I hope to give them a chance for a better life. It’s also something my girlfriend and I both share as a goal, so we would have no problem opening our hearts and home to animals in need.</p>
+        </div>
+      </div>
+
+      <div class="bucket-item">
+        <img src="https://i.imgur.com/19rE2wr.jpeg" alt="Volunteer Abroad">
+        <div class="bucket-item-content">
+          <h3>Just Live</h3>
+          <p>Living life to the fullest has always been my goal. It's about embracing every moment, learning from each experience, and making memories along the way. Sometimes, it's the simple things—like a quiet morning, a spontaneous adventure, or a laugh with friends—that truly define a rich life. For me, it’s all about finding joy in the present, staying curious, and not letting the pressures of the world dictate my happiness. I believe in following what feels right, whether that’s chasing dreams or simply being content with where I am. Life is about the journey, not the destination.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <button><a href="#top">Go Top</a></button>
+  <button><a href="index.html">Home</a></button>
+
+</body>
+
+</html>

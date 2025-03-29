@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Special Place</title>
+    <style>
+      body {
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #b3b3b3;
+      }
+
+      h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1db954;
+            margin-bottom: 20px;
+        }
+
+      .main-content {
+          margin: 20px auto;
+          padding: 20px;
+          max-width: 1200px;
+      }
+
+      section {
+          background-color: #181818;
+          border-radius: 10px;
+          padding: 20px;
+          margin-bottom: 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+          font-size: 28px;
+          font-weight: 700;
+          color: #e0e0e0;
+          margin-bottom: 15px;
+      }
+
+      p {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #e0e0e0;
+          margin-bottom: 20px;
+      }
+      
+      
+.image-gallery {
+    margin-bottom: 20px;
+}
+
+.image-gallery h2 {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+
+.image-gallery .images-container {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.image-gallery .images-container a {
+    width: 23%; 
+}
+
+.image-gallery img {
+    width: 100%; 
+    height: 170px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
+}
+
+
+
+
+  
+      footer {
+          background-color: #1a1a1a;
+          color: #b3b3b3;
+          text-align: center;
+          padding: 1rem;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+
+      a {
+          color: #1DB954;
+          text-decoration: none;
+      }
+
+      .other-places {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 20px;
+          margin-top: 20px;
+      }
+
+      .place {
+          background-color: #242424;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          height: auto;
+          transition: transform 0.3s ease;
+      }
+
+      .place img {
+          width: 100%;
+          height: 200px;
+          border-radius: 8px;
+          object-fit: cover;
+          margin-bottom: 15px;
+      }
+
+      .place h3 {
+          font-size: 22px;
+          color: #e0e0e0;
+          margin-bottom: 10px;
+      }
+
+      .place p {
+          font-size: 14px;
+          color: #e0e0e0;
+          margin-bottom: 10px;
+          flex-grow: 1;
+          overflow: visible;
+      }
+
+      .place:hover {
+          transform: translateY(-10px);
+      }
+
+      .other-places h2 {
+          grid-column: 1 / -1;
+          text-align: center;
+      }
+
+      .nav-bar {
+            width: 100%;
+            background-color: #181818;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px; 
+        }
+
+        .nav-bar button:hover {
+            background-color: #1DB954;
+            transform: scale(1.05);
+            border-radius: 20px; 
+        }
+
+        .nav-bar button:active {
+            transform: scale(0.98);
+        }
+
+        button {
+            background-color: #282828;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #1DB954; 
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <button><a href="index.html">Home</a></button>
+    <button><a href="biography.html">Biography</a></button>
+    <button><a href="Skills.html">Skills</a></button>
+    <button><a href="resume.html">Resume</a></button>
+    <button><a href="dump.html">Dump</a></button>
+    <button><a href="MyBeat.html">Beat</a></button>
+    <button><a href="Film.html">Films</a></button>
+    <button><a href="travel.html">Places</a></button>
+    <button><a href="B-List.html">Goals</a></button>
+  </div>
+
+  <div class="main-content">
+    <header>
+        <h1>South Korea</h1>
+    </header>
+
+    <section class="image-gallery">
+      <h2>Detailed Pictures of the Scenery</h2>
+      <div class="images-container">
+          <a href="https://i.imgur.com/rGikEi6.jpeg" target="_blank">
+              <img src="https://i.imgur.com/rGikEi6.jpeg" alt="Scenery 1">
+          </a>
+          <a href="https://i.imgur.com/rRNDcwP.jpeg" target="_blank">
+              <img src="https://i.imgur.com/rRNDcwP.jpeg" alt="Scenery 2">
+          </a>
+          <a href="https://i.imgur.com/7pgIwcl.jpeg" target="_blank">
+              <img src="https://i.imgur.com/7pgIwcl.jpeg" alt="Scenery 3">
+          </a>
+          <a href="https://i.imgur.com/8SmqCa0.jpeg" target="_blank">
+              <img src="https://i.imgur.com/8SmqCa0.jpeg" alt="Scenery 4">
+          </a>
+      </div>
+  </section>
+
+    <section class="description">
+        <h2>Why This Place Is Special To Me</h2>
+        <p>South Korea is special to me because it's a place that brings my favorite things to life. I’ve been captivated by K-dramas, which have introduced me to the country's rich culture and beautiful landscapes. I also love Korean food, from the savory flavors of kimchi and bibimbap to the delicious variety of street foods. And of course, K-pop has become a huge part of my life, with its energetic music and unforgettable performances. South Korea feels like a world of its own, full of vibrant culture and entertainment that I truly enjoy.</p>
+    </section>
+
+    <section class="how-to-get-there">
+        <h2>How to Get There</h2>
+<p>To get to South Korea from Manila, follow these steps:</p>
+<ul>
+  <li><strong>Book a Flight:</strong> Look for direct flights from Manila (Ninoy Aquino International Airport - NAIA) to South Korea. The main destination is Seoul (Incheon International Airport - ICN), but flights to other cities like Busan (Gimhae International Airport - PUS) are also available. Airlines offering direct flights include Philippine Airlines (PAL), Korean Air, Asiana Airlines, Cebu Pacific, and Jeju Air. Flight duration is around 4 to 5 hours to Seoul and slightly longer to other cities like Busan.</li>
+  <li><strong>Flight Options:</strong> Choose airlines like Philippine Airlines, Korean Air, Asiana Airlines, Cebu Pacific, or Jeju Air. These airlines usually offer direct flights to Seoul or Busan from Manila.</li>
+  <li><strong>Arrival in South Korea:</strong> Upon arrival at Incheon International Airport or Gimhae International Airport, you will go through immigration and customs. Ensure your passport is valid for at least six months beyond your stay and be prepared to show proof of your return ticket and accommodation details if required.</li>
+  <li><strong>Visa Requirements:</strong> Philippine passport holders can stay in South Korea without a visa for up to 59 days for tourism purposes, provided they meet certain conditions, such as having a return ticket and sufficient funds for the stay. If you plan to stay longer or for other purposes, you may need to apply for a visa through the South Korean Embassy.</li>
+  <li><strong>Transportation from the Airport:</strong> After clearing customs, you can take taxis, buses, or trains to your destination. The Airport Railroad Express (AREX) connects Incheon Airport to Seoul, making it a convenient option. For other cities like Busan, buses or taxis are available. Ride-sharing services like KakaoTaxi are also commonly used in South Korea.</li>
+</ul>
+
+       
+
+      <h3>Location of Incheon International Airport</h3>
+      <div class="map-container" style="margin-top: 20px; width: 100%; height: 450px;">
+        <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.087074495355!2d126.43939297573992!3d37.458665972066626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b9a833a5efa59%3A0x8d4ba096cb5cbed4!2sIncheon%20International%20Airport!5e0!3m2!1sen!2sph!4v1743233976591!5m2!1sen!2sph" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+    </div>
+    
+    </section>
+
+    <section class="other-places">
+        <h2>Places to Visit in South Korea</h2>
+        <div class="place">
+          <a href="https://i.imgur.com/0MmME1x.jpeg" target="_blank">
+            <img src="https://i.imgur.com/0MmME1x.jpeg" alt="Place 1">
+          </a>
+            <h3>Seoul</h3>
+            <p>Seoul, the capital city of South Korea, is a dynamic metropolis that seamlessly blendsmodern innovation with rich history and tradition. Known for its skyscrapers, bustling shopping districts, and vibrant nightlife, Seoul is also a city of deep cultural heritage, home to stunning palaces, traditional markets, and serene temples. Key landmarks include Gyeongbokgung Palace, a majestic royal palace that dates back to the 14th century, and Bukchon Hanok Village, where visitors can wander through narrow streets lined with traditional Korean houses (hanok). The N Seoul Tower offers breathtaking panoramic views of the city, while Myeongdong is a bustling shopping district perfect for fashion and food lovers.</p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/lgXrlf6.jpeg" target="_blank">
+            <img src="https://i.imgur.com/lgXrlf6.jpeg" alt="Place 2">
+          </a>
+            <h3>Jeju Island</h3>
+            <p>Jeju Island, often referred to as South Korea's "Island of the Gods," is a stunning volcanic island located off the southern coast of the Korean Peninsula. Known for its breathtaking natural beauty, Jeju is a popular destination for both locals and tourists seeking a peaceful escape from the hustle and bustle of mainland Korea.
+
+                The island is famous for its unique volcanic landscapes, including Hallasan Mountain, the tallest peak in South Korea, offering beautiful hiking trails and views. Seongsan Ilchulbong (Sunrise Peak) is another iconic landmark, offering incredible sunrise views from the top of a volcanic crater. </p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/oheWnhS.jpeg" target="_blank">
+            <img src="https://i.imgur.com/oheWnhS.jpeg" alt="Place 3">
+          </a>
+            <h3>Busan</h3>
+            <p>One of the city's most famous attractions is Haeundae Beach, a wide sandy beach that comes alive in the summer with visitors enjoying the sea and vibrant beach culture. Gamcheon Culture Village, with its colorful houses and artistic murals, is another must-see, offering a charming blend of creativity and history. Jagalchi Fish Market, the largest seafood market in South Korea, is a must-visit for food lovers, where you can sample fresh seafood and experience the lively atmosphere of the market.</p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/rfWc10Q.jpeg" target="_blank">
+            <img src="https://i.imgur.com/rfWc10Q.jpeg" alt="Place 1">
+          </a>
+          <h3>Gyeongju</h3>
+          <p>Gyeongju, often called the "museum without walls," is a city in South Korea that holds a wealth of history and cultural heritage. Located in the southeastern part of the country, Gyeongju was once the capital of the ancient Silla Kingdom, which ruled for nearly a thousand years, making it one of Korea’s most historically significant cities. The city is home to numerous ancient sites, including Bulguksa Temple, a UNESCO World Heritage Site known for its stunning architecture and Buddhist artifacts. Another major attraction is Seokguram Grotto, a temple set in a cave that houses a beautiful Buddha statue, offering both spiritual and historical significance.</p>
+        </div>
+    </section>
+  </div>
+  <button><a href="#top">Go Top</a></button>
+  <button><a href="travel.html">Home</a></button>
+
+</body>
+</html>
+  

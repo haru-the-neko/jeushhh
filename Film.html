@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            padding-top: 60px; 
+        }
+        .nav-bar {
+            width: 100%;
+            background-color: #181818;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px; 
+        }
+
+        .nav-bar button:hover {
+            background-color: #1DB954;
+            transform: scale(1.05);
+            border-radius: 20px; 
+        }
+
+        .nav-bar button:active {
+            transform: scale(0.98);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1db954;
+            font-size: 3.5em;
+            margin-top: 30px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .section {
+            padding: 30px;
+            margin: 30px auto;
+            width: 85%;
+            background-color: #181818;
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .video-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .video-item {
+            width: 48%;
+            background-color: #282828;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+        }
+
+        .caption {
+            padding: 15px;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .synopsis {
+            padding: 15px;
+            color: #b3b3b3;
+            font-size: 1em;
+            text-align: left;
+            background-color: #222222;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .main-artist {
+            padding: 15px;
+            color: #b3b3b3;
+            font-size: 1em;
+            text-align: center;
+            background-color: #222222;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #b3b3b3;
+        }
+
+        .footer a {
+            color: #1db954;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #1db954;
+            border-radius: 50px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .footer a:hover {
+            background: #1db954;
+            color: #121212;
+        }
+
+        button {
+            background-color: #282828;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #1DB954; 
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .poster {
+            width: 100%;
+            max-width: 200px;  
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .video-item {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <button><a href="index.html">Home</a></button>
+        <button><a href="biography.html">Biography</a></button>
+        <button><a href="Skills.html">Skills</a></button>
+        <button><a href="resume.html">Resume</a></button>
+        <button><a href="dump.html">Dump</a></button>
+        <button><a href="MyBeat.html">Beat</a></button>
+        <button><a href="Film.html">Films</a></button>
+        <button><a href="travel.html">Places</a></button>
+        <button><a href="B-List.html">Goals</a></button>
+    </div>
+
+    <h1>Films</h1>
+
+    <div class="section" id="tv-shows">
+        <h2>TV Shows</h2>
+        <div class="video-container">
+            <div class="video-item">
+                <img src="https://i.imgur.com/8P0ruIm.jpeg" alt="Reply 1988 Poster" class="poster">
+                <iframe src="https://www.youtube.com/embed/c-EMf3JdxUA?si=boHzDECOd-UzNXBX" frameborder="0" allowfullscreen></iframe>
+                <div class="caption">Reply 1988 - Trailer</div>
+                <div class="synopsis">
+                    
+                    <p>A heartwarming story about a group of friends growing up in the late 1980s, as they navigate family, friendship, and love in a nostalgic South Korean neighborhood.</p>
+                </div>
+                <div class="main-artist">
+                    <strong>Main Artist:</strong> <p>Hyeri, Ryu Jun-yeol, Park Bo-gum</p>
+                </div>
+            </div>
+            <div class="video-item">
+                <img src="https://i.imgur.com/Ysw0V9r.jpeg" alt="Stranger Things Poster" class="poster">
+                <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU?si=1k-HskobxDjMCAJ3" frameborder="0" allowfullscreen></iframe>
+                <div class="caption">Stranger Things - Trailer</div>
+                <div class="synopsis">
+                    <p>In the 1980s, a group of kids in a small town uncover a dark government conspiracy and supernatural forces while searching for their missing friend.</p>
+                </div>
+                <div class="main-artist">
+                    <strong>Main Artist:</strong> <p>Winona Ryder, Millie Bobby Brown, David Harbour</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="movies">
+        <h2>Movies</h2>
+        <div class="video-container">
+            <div class="video-item">
+                <img src="https://i.imgur.com/SRU1Rlb.jpeg" alt="Interstellar Poster" class="poster">
+                <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E?si=esXRsJfb3NY4nMaW" frameborder="0" allowfullscreen></iframe>
+                <div class="caption">Interstellar - Trailer</div>
+                <div class="synopsis">
+                   
+                    <p>A group of explorers travel through a wormhole in space to ensure humanity's survival as Earth faces environmental collapse.</p>
+                </div>
+                <div class="main-artist">
+                    <strong>Main Artist:</strong> <p>Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+                </div>
+            </div>
+            <div class="video-item">
+                <img src="https://i.imgur.com/RTgJEQK.jpeg" alt="Spirited Away Poster" class="poster">
+                <iframe src="https://www.youtube.com/embed/ByXuk9QqQkk?si=Cy6qamUuMFXaQG_T" frameborder="0" allowfullscreen></iframe>
+                <div class="caption">Spirited Away - Trailer</div>
+                <div class="synopsis">
+                   
+                    <p>A young girl finds herself trapped in a mysterious, magical world and must work to save her parents and return home in this fantastical animated adventure.</p>
+                </div>
+                <div class="main-artist">
+                    <strong>Main Artist:</strong> <p>Rumi Hiiragi, Miyu Irino, Mari Natsuki</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button><a href="#top">Go Top</a></button>
+    <button><a href="index.html">Home</a></button>
+</body>
+</html>

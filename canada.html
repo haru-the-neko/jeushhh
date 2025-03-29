@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Special Place</title>
+    <style>
+      body {
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #b3b3b3;
+      }
+
+      h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1db954;
+            margin-bottom: 20px;
+        }
+
+      .main-content {
+          margin: 20px auto;
+          padding: 20px;
+          max-width: 1200px;
+      }
+
+      section {
+          background-color: #181818;
+          border-radius: 10px;
+          padding: 20px;
+          margin-bottom: 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+          font-size: 28px;
+          font-weight: 700;
+          color: #e0e0e0;
+          margin-bottom: 15px;
+      }
+
+      p {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #e0e0e0;
+          margin-bottom: 20px;
+      }
+      
+      .image-gallery {
+          text-align: center;
+      }
+
+      .image-gallery img {
+          max-width: 100%;
+          height: 170px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .image-gallery img:hover {
+          transform: scale(1.1);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      footer {
+          background-color: #1a1a1a;
+          color: #b3b3b3;
+          text-align: center;
+          padding: 1rem;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+
+      a {
+          color: #1DB954;
+          text-decoration: none;
+      }
+
+      .other-places {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 20px;
+          margin-top: 20px;
+      }
+
+      .place {
+          background-color: #242424;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          height: auto;
+          transition: transform 0.3s ease;
+      }
+
+      .place img {
+          width: 100%;
+          height: 200px;
+          border-radius: 8px;
+          object-fit: cover;
+          margin-bottom: 15px;
+      }
+
+      .place h3 {
+          font-size: 22px;
+          color: #e0e0e0;
+          margin-bottom: 10px;
+      }
+
+      .place p {
+          font-size: 14px;
+          color: #e0e0e0;
+          margin-bottom: 10px;
+          flex-grow: 1;
+          overflow: visible;
+      }
+
+      .place:hover {
+          transform: translateY(-10px);
+      }
+
+      .other-places h2 {
+          grid-column: 1 / -1;
+          text-align: center;
+      }
+
+      .nav-bar {
+            width: 100%;
+            background-color: #181818;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px; 
+        }
+
+        .nav-bar button:hover {
+            background-color: #1DB954;
+            transform: scale(1.05);
+            border-radius: 20px; 
+        }
+
+        .nav-bar button:active {
+            transform: scale(0.98);
+        }
+
+        button {
+            background-color: #282828;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #1DB954; 
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <button><a href="index.html">Home</a></button>
+    <button><a href="biography.html">Biography</a></button>
+    <button><a href="Skills.html">Skills</a></button>
+    <button><a href="resume.html">Resume</a></button>
+    <button><a href="dump.html">Dump</a></button>
+    <button><a href="MyBeat.html">Beat</a></button>
+    <button><a href="Film.html">Films</a></button>
+    <button><a href="travel.html">Places</a></button>
+    <button><a href="B-List.html">Goals</a></button>
+  </div>
+
+  <div class="main-content">
+    <header>
+        <h1>Canada</h1>
+    </header>
+
+    <section class="image-gallery">
+      <h2>Detailed Pictures of the Scenery</h2>
+      <a href="https://i.imgur.com/s0EBEMP.jpeg" target="_blank">
+          <img src="https://i.imgur.com/s0EBEMP.jpeg" alt="Scenery 1">
+      </a>
+      <a href="https://i.imgur.com/8ArBPXq.jpeg" target="_blank">
+          <img src="https://i.imgur.com/8ArBPXq.jpeg" alt="Scenery 2">
+      </a>
+      <a href="https://i.imgur.com/sUjAW04.jpeg" target="_blank">
+          <img src="https://i.imgur.com/sUjAW04.jpeg" alt="Scenery 3">
+      </a>
+      <a href="https://i.imgur.com/LlLIAxN.jpeg" target="_blank">
+          <img src="https://i.imgur.com/LlLIAxN.jpeg" alt="Scenery 4">
+      </a>
+    </section>
+
+    <section class="description">
+        <h2>Why This Place Is Special To Me</h2>
+        <p>Canada is special to me not only because of its breathtaking landscapes and vibrant cities but mainly because my paternal family lives there. They’ve made it even more meaningful by showing me around the place during our video calls, sharing their favorite spots, and creating a connection that brings the beauty of Canada to life right in front of me. It’s a place that feels like home, even from afar.</p>
+    </section>
+
+    <section class="how-to-get-there">
+      <h2>How to Get There</h2>
+      <p>To get to Canada from Manila, follow these steps:</p>
+      <ul>
+          <li><strong>Book a Flight:</strong> Book a direct or connecting flight from Manila (Ninoy Aquino International Airport) to Canada. Popular destinations include Toronto, Vancouver, and Montreal. Direct flights are available to Toronto and Vancouver, typically taking around 12-14 hours. Flights with layovers may take longer (15-20 hours).</li>
+          <li><strong>Flight Options:</strong> Choose airlines like Air Canada, Philippine Airlines, or other international carriers such as Qatar Airways, Emirates, or Cathay Pacific. These airlines provide multiple routes and flight schedules.</li>
+          <li><strong>Arrival in Canada:</strong> Once you arrive in Canada, you will go through immigration and customs at the airport (Toronto Pearson, Vancouver International, etc.). Ensure that your passport and visa requirements are up to date.</li>
+          <li><strong>Transportation from the Airport:</strong> After clearing customs, you can take taxis, ride-sharing services (Uber, Lyft), or public transportation to your destination within the city. Car rentals are also an option if you plan to explore beyond the city.</li>
+          <li><strong>Visa Requirements:</strong> Philippine passport holders require a valid Canadian visa to enter Canada. Ensure that you apply for the necessary visa (tourist, student, work, etc.) before your trip. Also, provide proof of accommodation and return flight bookings.</li>
+      </ul>
+      <h3>Location of Toronto Pearson International Airport</h3>
+      <div class="map-container" style="margin-top: 20px; width: 100%; height: 400px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23082.920906315227!2d-79.6422866252912!3d43.68217230041516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b394ac02dd491%3A0xb41d5de9c4030ec5!2sToronto%20Pearson%20International%20Airport!5e0!3m2!1sen!2sph!4v1743184295762!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="other-places">
+        <h2>Places to Visit in Canada</h2>
+        <div class="place">
+          <a href="https://i.imgur.com/rvok7xJ.jpeg" target="_blank">
+            <img src="https://i.imgur.com/rvok7xJ.jpeg" alt="Place 1">
+          </a>
+            <h3>Niagra Falls</h3>
+            <p>Niagara Falls is a world-renowned natural wonder located on the border between Canada and the United States. It consists of three major waterfalls: the Horseshoe Falls (on the Canadian side), the American Falls, and the Bridal Veil Falls. Known for its breathtaking beauty and immense power, the falls drop over 50 meters (165 feet) and are a popular destination for tourists, offering stunning views, boat tours, and other attractions. The surrounding area also boasts parks, hiking trails, and vibrant cities like Niagara Falls, Ontario, and Buffalo, New York.</p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/O9hobTC.jpeg" target="_blank">
+            <img src="https://i.imgur.com/O9hobTC.jpeg" alt="Place 2">
+          </a>
+            <h3>Banff National Park</h3>
+            <p>Banff National Park, located in the Canadian Rockies in Alberta, is Canada’s oldest national park and a UNESCO World Heritage site. Known for its stunning mountain scenery, turquoise lakes like Lake Louise, and abundant wildlife, it’s a paradise for outdoor enthusiasts. Visitors can enjoy activities such as hiking, skiing, and canoeing, while being surrounded by breathtaking views of glaciers, hot springs, and forests. Banff is a year-round destination offering a mix of adventure, tranquility, and natural beauty.</p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/71ax0lJ.jpeg" target="_blank">
+            <img src="https://i.imgur.com/71ax0lJ.jpeg" alt="Place 3">
+          </a>
+            <h3>Yellowknife</h3>
+            <p>Yellowknife is the capital city of the Northwest Territories in Canada, located on the northern shore of Great Slave Lake. Known for its stunning natural beauty, it offers some of the best views of the Aurora Borealis (Northern Lights) in the world, especially during the winter months. Yellowknife is also a gateway for outdoor adventures, including ice fishing, dog sledding, and hiking. The city has a rich indigenous culture and history, with a vibrant arts scene and unique local attractions like the Old Town and the Prince of Wales Northern Heritage Centre.</p>
+        </div>
+        <div class="place">
+          <a href="https://i.imgur.com/sM0QrNI.jpeg" target="_blank">
+            <img src="https://i.imgur.com/sM0QrNI.jpeg" alt="Place 1">
+          </a>
+          <h3>Price Edward Island</h3>
+          <p>Prince Edward Island (PEI) is Canada’s smallest province, known for its stunning natural beauty, red-sand beaches, rolling green landscapes, and charming small towns. Famous as the setting for Anne of Green Gables, PEI offers a mix of history, outdoor adventure, and cultural experiences. Visitors can explore iconic attractions like Green Gables, PEI National Park, and Charlottetown, while enjoying delicious local seafood and peaceful coastal views. Whether you're a fan of literature, nature, or history, PEI provides a serene and picturesque escape.</p>
+        </div>
+    </section>
+  </div>
+  <button><a href="#top">Go Top</a></button>
+  <button><a href="travel.html">Home</a></button>
+
+</body>
+</html>

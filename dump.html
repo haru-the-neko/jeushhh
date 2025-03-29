@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery Dump</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        
+        .nav-bar {
+            width: 100%;
+            background-color: #181818;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px; 
+        }
+
+        .nav-bar button:hover {
+            background-color: #1DB954;
+            transform: scale(1.05);
+            border-radius: 20px; 
+        }
+
+        .nav-bar button:active {
+            transform: scale(0.98);
+        }
+
+        .gallery-container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 70px; 
+        }
+
+        .gallery-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .thumbnail {
+            position: relative;
+            width: 18%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #1c1c1c;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .thumbnail:hover .caption {
+            opacity: 1;
+        }
+
+        .section-box {
+            padding: 20px;
+            background-color: #282828;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1db954;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        h3, h4 {
+            color: #b3b3b3;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #282828;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #1DB954; 
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="nav-bar">
+        <button><a href="index.html">Home</a></button>
+        <button><a href="biography.html" style="color: white; text-decoration: none;">Biography</a></button>
+        <button><a href="Skills.html" style="color: white; text-decoration: none;">Skills</a></button>
+        <button><a href="resume.html" style="color: white; text-decoration: none;">Resume</a></button>
+        <button><a href="dump.html" style="color: white; text-decoration: none;">Dump</a></button>
+        <button><a href="MyBeat.html" style="color: white; text-decoration: none;">Beat</a></button>
+        <button><a href="Film.html" style="color: white; text-decoration: none;">Films</a></button>
+        <button><a href="travel.html">Places</a></button>
+        <button><a href="B-List.html">Goals</a></button>
+    </div>
+
+    <div class="gallery-container">
+        <h1>Albums</h1>
+        <div class="section-box">
+            <h2>People</h2>
+            <div class="gallery-row">
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/9l3jh04.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/9l3jh04.jpeg" alt="Image 1">
+                    </a>
+                    <div class="caption">Jay & Haru</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/piK1DNi.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/piK1DNi.jpeg" alt="Image 2">
+                    </a>
+                    <div class="caption">Jay & Potatoy</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/uf5AVBK.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/uf5AVBK.jpeg" alt="Image 3">
+                    </a>
+                    <div class="caption">Jay</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/KBuIi6B.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/KBuIi6B.jpeg" alt="Image 4">
+                    </a>
+                    <div class="caption">Jay</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/IAPpvgp.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/IAPpvgp.jpeg" alt="Image 5">
+                    </a>
+                    <div class="caption">Jay</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2>Pets</h2>
+            <div class="gallery-row">
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/qW177KM.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/qW177KM.jpeg" alt="Image 6">
+                    </a>
+                    <div class="caption">Potatoy</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/KKzGTq0.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/KKzGTq0.jpeg" alt="Image 7">
+                    </a>
+                    <div class="caption">Haru</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/HOwKS9A.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/HOwKS9A.jpeg" alt="Image 8">
+                    </a>
+                    <div class="caption">Haku</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/0eadDvt.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/0eadDvt.jpeg" alt="Image 9">
+                    </a>
+                    <div class="caption">Luna</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/azFaVcd.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/azFaVcd.jpeg" alt="Image 10">
+                    </a>
+                    <div class="caption">Migo</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2>Pets</h2>
+            <div class="gallery-row">
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/dYBI0dG.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/dYBI0dG.jpeg" alt="Image 11">
+                    </a>
+                    <div class="caption">Scout</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/ss7Os4j.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/ss7Os4j.jpeg" alt="Image 12">
+                    </a>
+                    <div class="caption">Sihu</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/G9bxSHy.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/G9bxSHy.jpeg" alt="Image 13">
+                    </a>
+                    <div class="caption">Shipu</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/5imeU3m.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/5imeU3m.jpeg" alt="Image 14">
+                    </a>
+                    <div class="caption">Mucho</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/JHdY6pm.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/JHdY6pm.jpeg" alt="Image 15">
+                    </a>
+                    <div class="caption">CowCow & Cola</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2>Places</h2>
+            <div class="gallery-row">
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/FYV9eE1.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/FYV9eE1.jpeg" alt="Image 16">
+                    </a>
+                    <div class="caption">BGC</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/bF6Jldo.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/bF6Jldo.jpeg" alt="Image 17">
+                    </a>
+                    <div class="caption">Pavillion</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/Vp0AjFU.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/Vp0AjFU.jpeg" alt="Image 18">
+                    </a>
+                    <div class="caption">iPong</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/48m0N84.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/48m0N84.jpeg" alt="Image 19">
+                    </a>
+                    <div class="caption">Beach</div>
+                </div>
+                <div class="thumbnail">
+                    <a href="https://i.imgur.com/cp0f0eB.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/cp0f0eB.jpeg" alt="Image 20">
+                    </a>
+                    <div class="caption">Starbucks</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button><a href="#top">Go Top</a></button>
+    <button><a href="index.html">Home</a>
+
+
+    
+
+</body>
+</html>

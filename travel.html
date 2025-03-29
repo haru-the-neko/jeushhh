@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="" />
+  <title>jeush</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      padding-top: 70px; 
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .resume-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; 
+    }
+
+    .resume-box {
+      background-color: #181818;
+      border-radius: 16px;
+      padding: 40px;
+      width: 80%;
+      max-width: 800px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      position: relative; 
+    }
+
+    h2 {
+      color: #1DB954;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    map area {
+      cursor: pointer;
+    }
+
+    .nav-bar {
+      width: 100%;
+      background-color: #181818;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-bar button {
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .nav-bar button:hover {
+      background-color: #1DB954;
+      transform: scale(1.05);
+      border-radius: 20px;
+    }
+
+    .nav-bar button:active {
+      transform: scale(0.98);
+    }
+
+    button {
+            background-color: #282828;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #1DB954; 
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="nav-bar">
+    <button><a href="index.html">Home</a></button>
+    <button><a href="biography.html">Biography</a></button>
+    <button><a href="Skills.html">Skills</a></button>
+    <button><a href="resume.html">Resume</a></button>
+    <button><a href="dump.html">Dump</a></button>
+    <button><a href="MyBeat.html">Beat</a></button>
+    <button><a href="Film.html">Films</a></button>
+    <button><a href="travel.html">Places</a></button>
+    <button><a href="B-List.html">Goals</a></button>
+  </div>
+
+  <header>
+    
+  </header>
+
+  <section class="resume-container">
+    <div class="resume-box">
+      <h2></h2>
+      <img src="collageee.png" alt="Dream Places" usemap="#World Map">
+
+      <map name="World Map">
+        <area shape="rect" coords="463, 381, 588, 543" alt="Switzerland" href="switz.html" title="" target="_display">
+        <area shape="rect" coords="589, 53, 719, 235" alt="Canada" href="canada.html" title="" target="_display">
+        <area shape="rect" coords="19, 219, 169, 354" alt="Japan" href="japan.html" title="" target="_display">
+        <area shape="rect" coords="210, 381, 351, 534" alt="Egpyt" href="egypt.html" title="" target="_display">
+        <area shape="rect" coords="187, 25, 306, 192" alt="Korea" href="korea.html" title="" target="_display">
+      </map>
+
+      
+      <div class="button-container">
+        <button><a href="#top">Go Top</a></button>
+        <button><a href="index.html">Home</a></button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

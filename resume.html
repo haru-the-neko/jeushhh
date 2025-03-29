@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jester Jeush Albufera - Resume</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #181818;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-bar {
+        width: 100%;
+        background-color: #181818;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-bar button {
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+    }
+
+    .nav-bar button:hover {
+        background-color: #1DB954;
+        transform: scale(1.05);
+        border-radius: 20px;
+    }
+
+    .nav-bar button:active {
+        transform: scale(0.98);
+    }
+
+    .nav-bar a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .resume-container {
+        display: flex;
+        max-width: 1000px;
+        margin: 50px auto;
+        background: #222;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        margin-top: 70px; 
+    }
+
+    .sidebar {
+        width: 30%;
+        background: #10b981;
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center; 
+    }
+
+    .profile-image {
+        width: 80px; 
+        height: 80px; 
+        border-radius: 50%; 
+        overflow: hidden;
+        margin-right: 15px; 
+        display: inline-block;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    .profile h1 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    .contact-info, .about-me, .skills, .hobbies {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style-type: square;
+        padding-left: 20px;
+    }
+
+    .main-content {
+        width: 70%;
+        padding: 30px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+        color: #10b981;
+    }
+
+    .section ul {
+        list-style-type: disc;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background: #181818;
+        font-size: 14px;
+        border-top: 1px solid #444;
+    }
+
+    button {
+        background-color: #282828;
+        border: none;
+        color: white;
+        padding: 15px 40px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 30px;
+        margin: 15px 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    button:hover {
+        background-color: #1DB954;
+        transform: scale(1.05);
+    }
+
+    button a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+</style>
+
+        
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <button><a href="index.html">Home</a></button>
+        <button><a href="biography.html">Biography</a></button>
+        <button><a href="Skills.html">Skills</a></button>
+        <button><a href="resume.html">Resume</a></button>
+        <button><a href="dump.html">Dump</a></button>
+        <button><a href="MyBeat.html">Beat</a></button>
+        <button><a href="Film.html">Films</a></button>
+        <button><a href="travel.html">Places</a></button>
+        <button><a href="B-List.html">Goals</a></button>
+    </div>
+
+    <div class="resume-container">
+        <aside class="sidebar">
+            <div class="profile">
+                
+                <div class="profile-image">
+                    <img src="https://i.imgur.com/X0R7KYl.jpeg" alt="Profile Image"> 
+                </div>
+                <h1>Jester Jeush Albufera</h1>
+                <p class="subtitle">Second-Year IT Student</p>
+            </div>
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <p>Email: jesterjeush@example.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Location: Philippines</p>
+            </div>
+
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    I am a dedicated second-year IT student passionate about coding, problem-solving, and learning new technologies. I strive to build innovative solutions and expand my technical skills for a future in tech.
+                </p>
+            </div>
+
+            <div class="skills">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Database Management</li>
+                    <li>HTML, CSS</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+
+            <div class="hobbies">
+                <h2>Hobbies & Interests</h2>
+                <ul>
+                    <li>Coding personal projects</li>
+                    <li>Listening to music</li>
+                    <li>Gaming & Esports</li>
+                    <li>Outdoor activities</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <h2>Work Experience</h2>
+                <ul>
+                    <li>Developed a working calculator using Visual Studio</li>
+                    <li>Developed a plate number system using Visual Studio</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Educational Background</h2>
+                <ul>
+                    <li><strong>Jose Rizal Elementary School</strong> - Grade School</li>
+                    <li><strong>Sariaya Institute</strong> - Middle School</li>
+                    <li><strong>University of the East</strong> - College</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Problem-solving & critical thinking</li>
+                    <li>Team collaboration & leadership</li>
+                    <li>Project management & Agile methodologies</li>
+                    <li>Communication & technical writing</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <button><a href="#top">Go Top</a></button>
+    <button><a href="index.html">Home</a></button>
+</body>
+</html>
+ 
